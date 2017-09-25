@@ -1,0 +1,34 @@
+
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    
+    <script>
+      function getTOIPNewJquery(){
+        //createUrl();
+        console.log("response");
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "http://epaperbeta.timesofindia.com/ajax/epaperAjaxMethods.AjaxUtilsMethods,ePaperAjaxMethods.ashx?_method=GetMD5ForGivenValue&_session=rw",
+          "method": "POST",
+          "headers": {
+            "cache-control": "no-cache",
+            "postman-token": "3f946e52-7b97-4f58-17a3-2ff829b50220"
+        },
+          "data": "strToEncrypt=08_06_2016_pressguess"
+        }
+        
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <input type="reset" value="TOIP" onclick="javascript:getTOIPNew()"> 
+    <input type="reset" value="TOICrest" onclick="javascript:getTOIPNewJquery()"> 
+    <input type="reset" value="ETMumbai" onclick="javascript:getETMumbai()"> 
+    <input type="reset" value="PuneMirror" onclick="javascript:getPuneMirror()"> 
+  </body>
+</html>
